@@ -10,7 +10,7 @@ class Matrix
 private:
 	int a[n][n];
 	int column_sum[n];
-	int i, j, k, c, product;
+	int i, j, k, c, product; // c - temporary variable, i - raw, j - column
 public:
 	void matrix_input();
 	void matrix_output();
@@ -45,7 +45,7 @@ void Matrix::matrix_sorting()
 		for (k = n - 1; k >= 0; k--) {
 			for (j = 0; j < k; j++) {
 				if (a[i][j] < a[i][j + 1]) {
-					c = a[i][j];     // c - temporary variable
+					c = a[i][j];     
 					a[i][j] = a[i][j + 1];
 					a[i][j + 1] = c;
 				}
